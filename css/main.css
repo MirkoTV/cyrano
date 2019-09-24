@@ -1,0 +1,203 @@
+body {
+    margin: 0px;
+    font-family: 'Chilanka', cursive;
+    background-color: #f0f1f3;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.scene {
+  padding: 20px;
+  width: 45%;
+  height: 350px;
+  /* border: 1px solid #CCC; */
+  margin: 40px 0;
+  perspective: 600px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  position: relative;
+}
+
+.card.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.card__face {
+  padding-top:45px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  line-height: 44px;
+  /* color: white; */
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+  backface-visibility: hidden;
+}
+
+.card__face--front {
+  /* background: red; */
+}
+
+.card__face--back {
+  /* background: blue; */
+  transform: rotateY(180deg);
+}
+
+.history1 {
+  object-fit: contain;
+  vertical-align: middle;
+  /* width: 200px; */
+  height: 450px;
+  border-radius: 30px;
+}
+
+.history3 {
+  margin-top: 70px;
+  object-fit: contain;
+  vertical-align: middle;
+  /* width: 200px; */
+  height: 200px;
+  border-radius: 30px;
+}
+
+.avatar2 {
+  object-fit: cover;
+  vertical-align: middle;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.avatar {
+  object-fit: cover;
+  vertical-align: middle;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+}
+
+.parallax {
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+.parallax1 {
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+    background-image: url("../Images/fondo.jpg");
+}
+
+.parallax2 {
+    height: 400px;
+    width: 100%; 
+    /*justify-content: space-around; */
+    background-image: url("../images/cover.jpg");
+    margin: 0px;
+}
+
+.parallax1::before {
+    content: "";
+    background-color: rgba(0,0,0,0.5);
+    height: 900px;
+    width: 100%;
+    position: absolute;
+}
+
+.parallax2::before {
+  content: "";
+  background-color: rgba(0,0,0,0.5);
+  height: 400px;
+  width: 100%;
+  position: absolute;
+
+}
+
+
+.title {
+    font-size: 80px;
+    margin: 0px;
+    text-align: center;
+}
+
+.sub-title {
+    font-size: 25px;
+    margin-bottom: 120px;
+}
+
+.parallax-text {        
+    color: #d6d6d6;
+    z-index: 20;
+}
+
+.main-button {
+    display: inline-block;
+    border-radius: 16px;
+    background-color: #258aaf;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    z-index: 20;
+  }
+  
+  .main-button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .main-button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .main-button:hover span {
+    padding-right: 25px;
+  }
+  
+  .main-button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+.section {
+  width: 80%;
+}
+
+.mision-container {
+  margin: 0px 30px;
+  color: white;
+  z-index: 20;
+  border: 2px solid;
+    padding: 20px 20px 10px;
+    border-radius: 10px;
+}

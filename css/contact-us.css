@@ -1,0 +1,13 @@
+.contact-us-container {
+    display: flex;    
+    margin-top: 50px        
+}
+
+.contact-us-container img {
+    max-width: 500px;
+    border-radius: 10px
+}
+
+.map-container{
+    padding: 0px 50px 50px 50px;
+}
